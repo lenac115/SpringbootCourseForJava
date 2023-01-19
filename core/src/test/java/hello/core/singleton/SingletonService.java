@@ -3,6 +3,7 @@ package hello.core.singleton;
 //Singleton은 객체 인스턴스를 하나만 생성해 공유하기때문에 상태를 유지해선 안된다.
 //특정 클라이언트에 의존적인 필드가 있으면 안되고, 값을 변경가능한 필드가 있어선 안된다. 가급적 읽기만 가능해야한다.
 //공유값을 사용해선 안된다
+//순수 JAVA 코드로 짠 Singleton Pattern
 public class SingletonService {
 
     //1. static 영역에 객체를 1개 생성
