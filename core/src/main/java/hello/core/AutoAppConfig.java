@@ -23,8 +23,8 @@ public class AutoAppConfig {
 
     //자동 빈 등록과 수동 빈 등록이 같은 이름으로 겹칠 경우, 수동 빈 등록이 우선권을 가지며 오버라이딩 된다.
     //그러나 버그가 발생할 가능성이 생기므로 스프링 부트에서는 수동 빈 등록과 자동 빈 등록이 충돌나면 오류가 발생하도록 기본 값을 바꾸었다.
-    @Bean(name = "memoryMemberRepository")
+    /*@Bean(name = "memoryMemberRepository")
     MemberRepository memberRepository() {
         return new MemoryMemberRepository();
-    }
+    }*/
 }
