@@ -20,13 +20,15 @@ public class MemberServiceTest {
     @Test
     void join(){
         //given
-        Member member = new Member(1L, "memberA", Grade.VIP);
+        Member member1 = new Member(1L, "memberA", Grade.VIP);
+        Member member2 = new Member(2L, "memberB", Grade.VIP);
+        Member member3 = new Member(3L, "memberC", Grade.VIP);
 
         //when
-        memberService.join(member);
+        memberService.join(member1);
         Member findmember = memberService.findMember(1L);
 
         //then
-        Assertions.assertThat(member).isEqualTo(findmember);
+        Assertions.assertThat(member1).isEqualTo(findmember);
     }
 }

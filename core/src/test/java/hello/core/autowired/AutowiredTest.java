@@ -9,6 +9,8 @@ import org.springframework.lang.Nullable;
 
 import java.util.Optional;
 
+//autowired는 타입으로 매칭한다. 같은 타입의 결과가 둘 이상일 경우 타입이름 + 구분자로 매칭 가능하다.
+
 public class AutowiredTest {
 
     @Test
