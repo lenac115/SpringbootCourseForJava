@@ -7,6 +7,7 @@ import hello.core.member.MemberRepository;
 import hello.core.member.MemoryMemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -35,10 +36,10 @@ public class OrderSerivceImpl implements OrderService{
     //생성자는 클래스 생성시 작동하므로 생성 순서는 1번이다.
     //생성자가 1개일 경우 @Autowired 생략 가능
     @Autowired
-    public OrderSerivceImpl(MemberRepository memberRepository, DiscountPolicy rateDiscountPolicy) {
+    public OrderSerivceImpl(MemberRepository memberRepository, DiscountPolicy DiscountPolicy) {
         System.out.println("1. OrderSerivceImpl.OrderSerivceImpl");
         this.memberRepository = memberRepository;
-        this.discountPolicy = rateDiscountPolicy;
+        this.discountPolicy = DiscountPolicy;
     }
 
     //일반 메소드 주입
